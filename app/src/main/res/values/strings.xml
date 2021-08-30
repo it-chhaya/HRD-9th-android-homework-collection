@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">9th Homework Collection</string>
+
+    <string name="text_heading">Create new user</string>
+    <string name="text_profile_heading_title">Profile Details</string>
+    <string name="text_full_name">Full Name:</string>
+    <string name="text_email">Email:</string>
+    <string name="text_password">Password:</string>
+    <string name="text_data_full_name">Data Full Name</string>
+    <string name="text_data_email">Data Email</string>
+    <string name="text_data_password">Data Password</string>
+
+    <string name="hint_full_name">Enter full name</string>
+    <string name="hint_email">Enter email</string>
+    <string name="hint_password">Enter password</string>
+    <string name="hint_confirm_password">Enter confirm password</string>
+
+    <string name="action_cancel">Cancel</string>
+    <string name="action_save">Save</string>
+    <string name="action_enter_intent">Intent</string>
+    <string name="action_go_back">Go Back</string>
+</resources>
