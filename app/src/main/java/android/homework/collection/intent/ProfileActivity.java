@@ -52,10 +52,12 @@ public class ProfileActivity extends AppCompatActivity {
 
     private void onButtonGoBackClicked() {
         binding.buttonGoBack.setOnClickListener(v -> {
+
             Intent intent = new Intent();
             intent.putExtra("message", "Please create a new profile again");
             setResult(RESULT_OK, intent);
             finish();
+
         });
     }
 }

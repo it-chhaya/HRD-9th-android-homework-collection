@@ -54,7 +54,9 @@ public class ParseDataActivity extends AppCompatActivity {
                 profileIntent.putExtra("email", email);
                 profileIntent.putExtra("password", password);
                 profileIntent.putExtra("confirmedPassword", confirmedPassword);
+
                 onActivityResultLauncher.launch(profileIntent);
+
             } else {
                 Toast.makeText(this, "The password is not match", Toast.LENGTH_SHORT).show();
             }
