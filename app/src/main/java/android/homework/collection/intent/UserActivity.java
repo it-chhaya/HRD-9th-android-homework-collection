@@ -3,21 +3,20 @@ package android.homework.collection.intent;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.homework.collection.R;
-import android.homework.collection.databinding.ActivityProfileBinding;
+import android.homework.collection.databinding.ActivityUserBinding;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-public class ProfileActivity extends AppCompatActivity {
+public class UserActivity extends AppCompatActivity {
 
-    private static final String TAG = ProfileActivity.class.getName();
-    private ActivityProfileBinding binding;
+    private static final String TAG = UserActivity.class.getName();
+    private ActivityUserBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityProfileBinding.inflate(getLayoutInflater());
+        binding = ActivityUserBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
 

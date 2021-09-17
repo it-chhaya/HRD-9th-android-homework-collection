@@ -4,7 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.homework.collection.databinding.ActivityMainBinding;
-import android.homework.collection.intent.ParseDataActivity;
+import android.homework.collection.design.LogInActivity;
+import android.homework.collection.intent.InformationActivity;
 import android.os.Bundle;
 import android.view.View;
 
@@ -21,12 +22,22 @@ public class MainActivity extends AppCompatActivity {
 
         // initialize event
         onButtonHomeworkIntentClicked();
+        onButtonSendToClicked();
     }
 
     private void onButtonHomeworkIntentClicked() {
 
         binding.buttonHomeworkIntent.setOnClickListener(evt -> {
-            Intent intent = new Intent(this, ParseDataActivity.class);
+            Intent intent = new Intent(this, InformationActivity.class);
+            startActivity(intent);
+        });
+
+    }
+
+    private void onButtonSendToClicked() {
+
+        binding.buttonSendTo.setOnClickListener(v -> {
+            Intent intent = new Intent(this, LogInActivity.class);
             startActivity(intent);
         });
 

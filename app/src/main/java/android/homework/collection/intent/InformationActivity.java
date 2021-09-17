@@ -3,30 +3,29 @@ package android.homework.collection.intent;
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContract;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.homework.collection.databinding.ActivityParseDataBinding;
+import android.homework.collection.databinding.ActivityInformationBinding;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-public class ParseDataActivity extends AppCompatActivity {
+public class InformationActivity extends AppCompatActivity {
 
-    private static final String TAG = ParseDataActivity.class.getName();
+    private static final String TAG = InformationActivity.class.getName();
 
     // 1 -> declare view binding
-    private ActivityParseDataBinding binding;
+    private ActivityInformationBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // 2 -> init bind by using layout inflater from binding self-object
-        binding = ActivityParseDataBinding.inflate(getLayoutInflater());
+        binding = ActivityInformationBinding.inflate(getLayoutInflater());
         // 3 -> define view equals to binding.getRoot()
         View view = binding.getRoot();
         // 4 -> setContentView withing the view object
@@ -49,7 +48,7 @@ public class ParseDataActivity extends AppCompatActivity {
 
             // compare password and confirmed password
             if (password.equals(confirmedPassword)) {
-                Intent profileIntent = new Intent(this, ProfileActivity.class);
+                Intent profileIntent = new Intent(this, UserActivity.class);
                 profileIntent.putExtra("fullName", fullName);
                 profileIntent.putExtra("email", email);
                 profileIntent.putExtra("password", password);
@@ -77,7 +76,7 @@ public class ParseDataActivity extends AppCompatActivity {
                             binding.editTextEmail.setText("");
                             binding.editTextPassword.setText("");
                             binding.editTextConfirmPassword.setText("");
-                            Toast.makeText(ParseDataActivity.this, message, Toast.LENGTH_LONG).show();
+                            Toast.makeText(InformationActivity.this, message, Toast.LENGTH_LONG).show();
                         }
                     }
                 }

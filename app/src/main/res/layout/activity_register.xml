@@ -4,37 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".demo.RegisterActivity">
 
-    <Button
-        android:id="@+id/buttonHomeworkIntent"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:backgroundTint="#2196F3"
-        android:text="@string/action_enter_intent"
-        android:textAllCaps="false"
-        android:textSize="24sp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:hint="Enter your name"/>
 
     <Button
-        android:id="@+id/buttonSendTo"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:id="@+id/buttonCreateName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:backgroundTint="#2196F3"
-        android:text="@string/action_send_to"
-        android:textAllCaps="false"
-        android:textSize="24sp"
+        android:text="Create Now"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonHomeworkIntent" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
